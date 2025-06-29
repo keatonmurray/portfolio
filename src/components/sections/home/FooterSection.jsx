@@ -4,19 +4,33 @@ import { Carousel } from 'bootstrap';
 const FooterSection = () => {
   useEffect(() => {
     const el = document.getElementById('testimonialCarousel');
-    const bsCarousel = el ? Carousel.getInstance(el) || new Carousel(el, {
-      interval: 8000,
-      ride: 'carousel',
-    }) : null;
+    let carouselInstance;
 
-    const resumeCarousel = () => {
-      if (bsCarousel) {
-        bsCarousel.cycle();
+    if (el) {
+      carouselInstance = Carousel.getInstance(el) || new Carousel(el, {
+        interval: 8000,
+        ride: 'carousel',
+      });
+    }
+
+    const handleHashChange = () => {
+      if (carouselInstance) {
+        carouselInstance.dispose();
+        carouselInstance = new Carousel(el, {
+          interval: 8000,
+          ride: 'carousel',
+        });
       }
     };
 
-    window.addEventListener('hashchange', resumeCarousel);
-    return () => window.removeEventListener('hashchange', resumeCarousel);
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      if (carouselInstance) {
+        carouselInstance.dispose();
+      }
+    };
   }, []);
 
   return (
@@ -34,7 +48,7 @@ const FooterSection = () => {
                 id="testimonialCarousel"
                 className="carousel slide carousel-fade"
                 data-bs-ride="carousel"
-                data-bs-interval="4000"
+                data-bs-interval="8000"
               >
                 <div className="carousel-inner">
                   <div className="carousel-item active">
@@ -103,6 +117,7 @@ const FooterSection = () => {
           </div>
         </div>
       </div>
+
       <div className="py-5 col-12 my-md-3 my-0">
         <div className="container">
           <h1 className="fw-semibold display-4 text-dark text-md-start text-center mb-2">
