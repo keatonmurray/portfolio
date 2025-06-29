@@ -140,7 +140,7 @@ const MiddleSection = () => {
                   {section.images.length > 1 && (
                     <>
                       <button
-                        className="carousel-control-prev d-md-block d-none"
+                        className="carousel-control-prev"
                         type="button"
                         data-bs-target={`#carousel-${index}`}
                         data-bs-slide="prev"
@@ -149,7 +149,7 @@ const MiddleSection = () => {
                         <span className="visually-hidden">Previous</span>
                       </button>
                       <button
-                        className="carousel-control-next d-md-block d-none"
+                        className="carousel-control-next"
                         type="button"
                         data-bs-target={`#carousel-${index}`}
                         data-bs-slide="next"
