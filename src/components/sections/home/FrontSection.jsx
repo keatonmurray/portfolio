@@ -47,7 +47,7 @@ const FrontSection = () => {
             <i className="fa-brands fa-github"></i>
           </a>
           <a
-            href="https://www.linkedin.com/in/keaton-murray-917642302/"
+            href="www.linkedin.com/in/keatonmurray/"
             target="_blank"
             rel="noopener noreferrer"
             className="me-3 text-white"
