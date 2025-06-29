@@ -16,8 +16,7 @@ const projectSections = [
     ],
     description: (
       <i>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien.
-        Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+        Powerful CMS solutions built on a headless architecture using WordPress and GraphQL. Designed to scale, easy to integrate, and fully customizable for any frontend.
       </i>
     )
   },
@@ -33,8 +32,7 @@ const projectSections = [
     ],
     description: (
       <i>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien.
-        Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+        Engineered headless e-commerce plugins that enable seamless, secure, and flexible payment processing using modern RESTful APIs.
       </i>
     )
   },
@@ -50,8 +48,7 @@ const projectSections = [
     ],
     description: (
       <i>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien.
-        Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+        Full-stack web apps using Laravel’s ecosystem and Inertia-powered Vue frontend — offering fast, reactive, and SEO-optimized experiences.
       </i>
     )
   },
@@ -67,8 +64,7 @@ const projectSections = [
     ],
     description: (
       <i>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien.
-        Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+        A modern eCommerce app built from scratch with vanilla PHP and a React frontend, powered by GraphQL APIs. Lightweight, fast, and modular.
       </i>
     )
   }
@@ -96,11 +92,7 @@ const MiddleSection = () => {
               </div>
 
               <div className="col-12 px-md-1 px-3">
-                <div
-                  id={`carousel-${index}`}
-                  className="carousel slide"
-                  data-bs-ride="carousel"
-                >
+                <div id={`carousel-${index}`} className="carousel slide" data-bs-ride="carousel">
                   <div className="carousel-indicators">
                     {section.images.map((_, i) => (
                       <button
@@ -117,22 +109,10 @@ const MiddleSection = () => {
 
                   <div className="carousel-inner">
                     {section.images.map((img, i) => (
-                      <div
-                        key={i}
-                        className={`carousel-item ${i === 0 ? "active" : ""}`}
-                      >
-                        <a
-                          href={img.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="d-block"
-                        >
+                      <div key={i} className={`carousel-item ${i === 0 ? "active" : ""}`}>
+                        <a href={img.link} target="_blank" rel="noopener noreferrer" className="d-block">
                           <figure className="project-figure text-center">
-                            <img
-                              src={img.src}
-                              className="img-fluid project-image"
-                              alt={img.alt}
-                            />
+                            <img src={img.src} className="img-fluid project-image" alt={img.alt} />
                             <div className="project-hover-overlay">
                               <i className="fa-solid fa-link"></i>
                             </div>
