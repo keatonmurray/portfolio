@@ -18,7 +18,7 @@ const FrontSection = () => {
               and performance-driven thinking – that's my zone.
             </p>
           </div>
-          <div id="projects" className="cto-projects">
+          <div id="projects" className="cto-projects d-flex align-items-md-start align-items-center justify-content-center justify-content-md-start">
             <button
               type="button"
               className="btn btn-light d-flex align-items-center justify-content-center"
@@ -47,7 +47,7 @@ const FrontSection = () => {
             <i className="fa-brands fa-github"></i>
           </a>
           <a
-            href="www.linkedin.com/in/keatonmurray"
+            href="https://www.linkedin.com/in/keatonmurray/"
             target="_blank"
             rel="noopener noreferrer"
             className="me-3 text-white"
