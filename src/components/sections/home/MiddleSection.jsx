@@ -1,0 +1,183 @@
+import React from "react";
+
+const projectSections = [
+  {
+    title: (
+      <>
+        Custom <span className="text-green">Headless CMS</span> Themes
+      </>
+    ),
+    images: [
+      { src: "/img/spikyblooms1.png", alt: "Project" },
+      { src: "/img/spikyblooms2.png", alt: "Project" },
+      { src: "/img/spikyblooms3.png", alt: "Project" },
+      { src: "/img/spikyblooms4.png", alt: "Project" },
+      { src: "/img/spikyblooms5.png", alt: "Project" }
+
+    ],
+    description: (
+      <i>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. 
+        Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+      </i>
+    )
+  },
+  {
+    title: (
+      <>
+        Custom <span className="text-green">Headless WooCommerce</span> Plugins
+      </>
+    ),
+    images: [
+      { src: "/img/hp1.png", alt: "Project" },
+      { src: "/img/spikyblooms5.png", alt: "Project" }
+    ],
+    description: (
+      <i>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. 
+        Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+      </i>
+    )
+  },
+  {
+    title: (
+      <>
+        <span className="text-green">Laravel</span> Framework + <span className="text-green">Vue/Inertia</span>
+      </>
+    ),
+    images: [
+      { src: "/img/laravel1.png", alt: "Project" },
+      { src: "/img/laravel2.png", alt: "Project" }
+    ],
+    description: (
+      <i>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. 
+        Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+      </i>
+    )
+  },
+  {
+    title: (
+      <>
+        Vanilla <span className="text-green">PHP (OOP)</span> + <span className="text-green">React</span> + <span className="text-green">GraphQL</span>
+      </>
+    ),
+    images: [
+      { src: "/img/php1.png", alt: "Ecommerce" },
+      { src: "/img/php2.png", alt: "Cart" }
+    ],
+    description: (
+      <i>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. 
+        Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
+      </i>
+    )
+  }
+];
+
+
+const MiddleSection = () => {
+  return (
+    <div className="py-5 bg-light-custom" id="myProjects">
+      <div className="container">
+        <h2 className="fw-semibold display-4 text-dark text-center mb-2">
+          <span className="font-purple">Open-source</span> Projects
+        </h2>
+        <h5 className="text-center fw-normal letter-spacing-sm mb-2">
+          "Programming isn’t about what you know; it’s about what you can figure out."
+          <span className="d-block">- Chris Pine</span>
+        </h5>
+        <hr className="line-breaker" />
+        <br /><br />
+
+        <div className="row project-row align-items-stretch">
+          {projectSections.map((section, index) => (
+            <React.Fragment key={index}>
+              <div className="col-12">
+                <h2 className="my-3 fw-normal text-center">
+                  {section.title}
+                </h2>
+              </div>
+
+              <div className="col-12 px-md-1 px-3">
+                <div
+                  id={`carousel-${index}`}
+                  className="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div className="carousel-indicators">
+                    {section.images.map((_, i) => (
+                      <button
+                        key={i}
+                        type="button"
+                        data-bs-target={`#carousel-${index}`}
+                        data-bs-slide-to={i}
+                        className={i === 0 ? "active" : ""}
+                        aria-current={i === 0 ? "true" : undefined}
+                        aria-label={`Slide ${i + 1}`}
+                      ></button>
+                    ))}
+                  </div>
+
+                  <div className="carousel-inner">
+                    {section.images.map((img, i) => (
+                      <div
+                        key={i}
+                        className={`carousel-item ${i === 0 ? "active" : ""}`}
+                      >
+                        <figure className="project-figure text-center">
+                          <img
+                            src={img.src}
+                            className="img-fluid project-image"
+                            alt={img.alt}
+                          />
+                        </figure>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* ◀️ ▶️ Carousel Controls */}
+                  {section.images.length > 1 && (
+                    <>
+                      <button
+                        className="carousel-control-prev d-md-block d-none"
+                        type="button"
+                        data-bs-target={`#carousel-${index}`}
+                        data-bs-slide="prev"
+                      >
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                      </button>
+                      <button
+                        className="carousel-control-next d-md-block d-none"
+                        type="button"
+                        data-bs-target={`#carousel-${index}`}
+                        data-bs-slide="next"
+                      >
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                      </button>
+                    </>
+                  )}
+                </div>
+              </div>
+
+              <div className="col-12 text-center description-text mt-4">
+                <h5 className="fw-400 letter-spacing-sm centered-description project-text">
+                  {section.description}
+                </h5>
+              </div>
+
+              <div className="col-12">
+                <hr className="line-breaker" />
+              </div>
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+    </div>
+
+  );
+};
+
+export default MiddleSection;
