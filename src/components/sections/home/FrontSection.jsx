@@ -18,30 +18,51 @@ const FrontSection = () => {
               and performance-driven thinking – that's my zone.
             </p>
           </div>
-          <div className="w-100 mt-4 d-flex flex-column flex-lg-row justify-content-lg-between justify-content-center socials text-center text-lg-start">
-            <div className="mb-3 mb-lg-0">
-              <i className="fa-brands fa-github me-3"></i>
-              <i className="fa-brands fa-linkedin-in me-3"></i>
-              <i className="fa-brands fa-instagram me-3"></i>
-            </div>
-            <div id="projects" className="cto-projects">
-              <a
-                type="button"
-                href="#myProjects"
-                className="btn btn-light d-flex align-items-center justify-content-center"
-              >
-                <span>
-                  <i className="fa-solid fa-eye me-2"></i>
-                </span>
-                See what I'm good at
-              </a>
-            </div>
+          <div id="projects" className="cto-projects">
+            <a
+              type="button"
+              href="#myProjects"
+              className="btn btn-light d-flex align-items-center justify-content-center"
+            >
+              <span>
+                <i className="fa-solid fa-eye me-2"></i>
+              </span>
+              See what I'm good at
+            </a>
           </div>
         </div>
       </div>
 
-      {/* Right Section (Image) */}
-      <div className="col-12 col-lg-6 right-section p-0 m-0">
+      <div className="col-12 col-lg-6 right-section p-0 m-0 position-relative">
+        <div className="image-overlay"></div>
+
+        <div className="social-icons text-white me-md-4">
+          <a
+            href="https://github.com/keatonmurray"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="me-3 text-white"
+          >
+            <i className="fa-brands fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/keaton-murray-917642302/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="me-3 text-white"
+          >
+            <i className="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/bongjovi__/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white"
+          >
+            <i className="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+
         <figure className="h-100 w-100 m-0">
           <img
             src="/img/bg2.jpg"
@@ -50,6 +71,7 @@ const FrontSection = () => {
           />
         </figure>
       </div>
+
     </div>
   )
 }
