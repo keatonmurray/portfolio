@@ -16,6 +16,13 @@
   scroll-behavior: smooth !important;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    display: none;
+  }
+}
+
+
 html, body {
   height: 100%;
   overflow-x: hidden;
