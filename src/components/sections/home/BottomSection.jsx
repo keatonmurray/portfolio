@@ -47,6 +47,11 @@ const BottomSection = () => {
             ))}
           </div>
         </div>
+
+        <div className="col-12">
+          <hr className="line-breaker" />
+        </div>
+        
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import FrontSection from "../components/sections/home/FrontSection";
 import MiddleSection from "../components/sections/home/MiddleSection";
 import BottomSection from "../components/sections/home/BottomSection";
+import FooterSection from "../components/sections/home/FooterSection";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
         <FrontSection />
         <MiddleSection />
         <BottomSection />
+        <FooterSection />
       </div>
   );
 };
