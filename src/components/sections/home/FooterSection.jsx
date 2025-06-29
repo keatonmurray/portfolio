@@ -13,7 +13,7 @@ const FooterSection = () => {
   }, []);
 
   return (
-    <div className="py-5 col-12 my-3">
+    <div className="py-5 col-12 my-md-3 my-0">
       <div className="container">
         <div className="row">
           {/* Left side */}
