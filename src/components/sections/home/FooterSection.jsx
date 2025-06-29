@@ -5,7 +5,7 @@ const FooterSection = () => {
   useEffect(() => {
     const el = document.getElementById('testimonialCarousel');
     const bsCarousel = el ? Carousel.getInstance(el) || new Carousel(el, {
-      interval: 4000,
+      interval: 8000,
       ride: 'carousel',
     }) : null;
 
