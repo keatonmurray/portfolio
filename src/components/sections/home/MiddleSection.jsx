@@ -8,16 +8,15 @@ const projectSections = [
       </>
     ),
     images: [
-      { src: "/img/spikyblooms1.png", alt: "Project" },
-      { src: "/img/spikyblooms2.png", alt: "Project" },
-      { src: "/img/spikyblooms3.png", alt: "Project" },
-      { src: "/img/spikyblooms4.png", alt: "Project" },
-      { src: "/img/spikyblooms5.png", alt: "Project" }
-
+      { src: "/img/spikyblooms1.png", alt: "Project", link: "https://github.com/keatonmurray/headless-cms/" },
+      { src: "/img/spikyblooms2.png", alt: "Project", link: "https://github.com/keatonmurray/headless-cms/" },
+      { src: "/img/spikyblooms3.png", alt: "Project", link: "https://github.com/keatonmurray/headless-cms/" },
+      { src: "/img/spikyblooms4.png", alt: "Project", link: "https://github.com/keatonmurray/headless-cms/" },
+      { src: "/img/spikyblooms5.png", alt: "Project", link: "https://github.com/keatonmurray/headless-cms/" }
     ],
     description: (
       <i>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien.
         Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
       </i>
     )
@@ -29,12 +28,12 @@ const projectSections = [
       </>
     ),
     images: [
-      { src: "/img/hp1.png", alt: "Project" },
-      { src: "/img/spikyblooms5.png", alt: "Project" }
+      { src: "/img/hp1.png", alt: "Project", link: "https://github.com/keatonmurray/headless-payments/" },
+      { src: "/img/spikyblooms5.png", alt: "Project", link: "https://github.com/keatonmurray/headless-payments/" }
     ],
     description: (
       <i>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien.
         Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
       </i>
     )
@@ -46,12 +45,12 @@ const projectSections = [
       </>
     ),
     images: [
-      { src: "/img/laravel1.png", alt: "Project" },
-      { src: "/img/laravel2.png", alt: "Project" }
+      { src: "/img/laravel1.png", alt: "Project", link: "https://github.com/keatonmurray/ct-laravel-v2" },
+      { src: "/img/laravel2.png", alt: "Project", link: "https://github.com/keatonmurray/ct-laravel-v2" }
     ],
     description: (
       <i>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien.
         Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
       </i>
     )
@@ -63,18 +62,17 @@ const projectSections = [
       </>
     ),
     images: [
-      { src: "/img/php1.png", alt: "Ecommerce" },
-      { src: "/img/php2.png", alt: "Cart" }
+      { src: "/img/php1.png", alt: "Ecommerce", link: "https://github.com/keatonmurray/mini-ecommerce-app" },
+      { src: "/img/php2.png", alt: "Cart", link: "https://github.com/keatonmurray/mini-ecommerce-app" }
     ],
     description: (
       <i>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sapien velit, aliquet eget commodo nec, auctor a sapien.
         Nam eu neque vulputate diam rhoncus faucibus. Curabitur quis varius libero. Lorem.
       </i>
     )
   }
 ];
-
 
 const MiddleSection = () => {
   return (
@@ -94,9 +92,7 @@ const MiddleSection = () => {
           {projectSections.map((section, index) => (
             <React.Fragment key={index}>
               <div className="col-12">
-                <h2 className="my-3 fw-normal text-center">
-                  {section.title}
-                </h2>
+                <h2 className="my-3 fw-normal text-center">{section.title}</h2>
               </div>
 
               <div className="col-12 px-md-1 px-3">
@@ -125,18 +121,27 @@ const MiddleSection = () => {
                         key={i}
                         className={`carousel-item ${i === 0 ? "active" : ""}`}
                       >
-                        <figure className="project-figure text-center">
-                          <img
-                            src={img.src}
-                            className="img-fluid project-image"
-                            alt={img.alt}
-                          />
-                        </figure>
+                        <a
+                          href={img.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="d-block"
+                        >
+                          <figure className="project-figure text-center">
+                            <img
+                              src={img.src}
+                              className="img-fluid project-image"
+                              alt={img.alt}
+                            />
+                            <div className="project-hover-overlay">
+                              <i className="fa-solid fa-link"></i>
+                            </div>
+                          </figure>
+                        </a>
                       </div>
                     ))}
                   </div>
 
-                  {/* ◀️ ▶️ Carousel Controls */}
                   {section.images.length > 1 && (
                     <>
                       <button
@@ -176,7 +181,6 @@ const MiddleSection = () => {
         </div>
       </div>
     </div>
-
   );
 };
 

@@ -3,10 +3,10 @@ const FrontSection = () => {
     <div className="row home min-vh-100">
       {/* Left Section */}
       <div className="col-12 col-lg-6 left-section m-0 d-flex flex-column">
-        <div className="d-flex align-items-lg-start align-items-center justify-content-lg-start justify-content-center flex-wrap">
-          <h5 className="text-white text-uppercase fw-semibold letter-spacing-sm mb-2">
-            Ecommerce Developer
-          </h5>
+      <div className="d-flex flex-column justify-content-center h-100">
+        <h5 className="text-white text-uppercase fw-semibold letter-spacing-sm mb-2 text-lg-start text-center w-100">
+          Ecommerce Developer
+        </h5>
           <div className="w-100 text-lg-start text-center">
             <h1 className="text-white display-3 fw-bold mb-3" style={{ whiteSpace: "nowrap" }}>
               Keaton Murray
