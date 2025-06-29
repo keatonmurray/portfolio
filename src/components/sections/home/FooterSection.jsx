@@ -14,7 +14,7 @@ const FooterSection = () => {
 
   return (
     <div>
-        <div className="py-5 col-12 my-md-3 my-0">
+        <div className="py-md-5 py-0 col-12 my-md-3 my-0">
             <div className="container">
                 <div className="row">
                 {/* Left side */}
