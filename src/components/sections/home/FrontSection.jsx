@@ -20,7 +20,7 @@ const FrontSection = () => {
               <i className="fa-brands fa-instagram me-3"></i>
             </div>
             <div id="projects" className="cto-projects pt-2">
-              <a href="#myProjects" className="cto-projects pt-2 d-inline-block text-white text-decoration-none">
+              <a href="#" className="cto-projects pt-2 d-inline-block text-white text-decoration-none">
                 <p className="fw-bold border-bottom text-uppercase d-inline-flex align-items-center gap-2 thick-bottom-border">
                   See what I'm good at
                 </p>
