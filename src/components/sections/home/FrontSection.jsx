@@ -19,16 +19,17 @@ const FrontSection = () => {
             </p>
           </div>
           <div id="projects" className="cto-projects">
-            <a
+            <button
               type="button"
-              href="#myProjects"
               className="btn btn-light d-flex align-items-center justify-content-center"
             >
               <span>
                 <i className="fa-solid fa-eye me-2"></i>
               </span>
-              See what I'm good at
-            </a>
+              <a href="#myProjects" className="text-decoration-none text-dark">
+                See what I'm good at
+              </a>
+            </button>
           </div>
         </div>
       </div>

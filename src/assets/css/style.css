@@ -96,12 +96,12 @@ main nav {
   cursor: pointer;
 }
 
-.cto-projects a {
+.cto-projects button {
   border-radius: 22px;
   border: 0;
   font-weight: 600;
   padding: 10px 16px;
-  color: var(--primaryBg)
+  color: var(--primaryBg);
 }
 
 .cto-projects a .fa-eye {
