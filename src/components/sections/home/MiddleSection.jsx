@@ -76,7 +76,7 @@ const projectSections = [
 
 const MiddleSection = () => {
   return (
-    <div className="py-5 bg-light-custom" id="myProjects">
+    <div className="pt-5 bg-light-custom" id="myProjects">
       <div className="container">
         <h2 className="fw-semibold display-4 text-dark text-center mb-2">
           <span className="font-purple">Open-source</span> Projects

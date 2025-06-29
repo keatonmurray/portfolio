@@ -12,7 +12,7 @@ const BottomSection = () => {
     "woo"
   ];
   return (
-    <div className="py-5">
+    <div className="py-5 my-5">
       <div className="container">
         <h2 className="fw-semibold display-4 text-dark text-center mb-2">Why <span className="font-purple">work</span> with me</h2>
         <h5 className="text-center fw-500 letter-spacing-sm mb-2">
