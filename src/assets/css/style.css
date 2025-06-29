@@ -22,7 +22,6 @@
   }
 }
 
-
 html, body {
   height: 100%;
   overflow-x: hidden;
@@ -69,6 +68,19 @@ main nav {
 
 .cto-projects {
   cursor: pointer;
+}
+
+.cto-projects a {
+  border-radius: 22px;
+  border: 0;
+  font-weight: 500;
+  padding: 10px 16px;
+  color: var(--primaryBg)
+}
+
+.cto-projects a .fa-eye {
+  color: var(--primaryBg) !important;
+  font-size: 22px;
 }
 
 .line-breaker {
