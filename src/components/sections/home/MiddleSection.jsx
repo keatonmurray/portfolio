@@ -72,92 +72,94 @@ const projectSections = [
 
 const MiddleSection = () => {
   return (
-    <div className="pt-5 bg-light-custom" id="myProjects">
-      <div className="container">
-        <h2 className="fw-semibold display-4 text-dark text-center mb-2">
-          <span className="font-purple">Open-source</span> Projects
-        </h2>
-        <h5 className="text-center fw-normal letter-spacing-sm mb-2">
-          "Programming isn’t about what you know; it’s about what you can figure out."
-          <span className="d-block">- Chris Pine</span>
-        </h5>
-        <hr className="line-breaker" />
-        <br /><br />
+    <div className="scroll-container">
+      <div className="pt-5 bg-light-custom" id="myProjects">
+        <div className="container">
+          <h2 className="fw-semibold display-4 text-dark text-center mb-2">
+            <span className="font-purple">Open-source</span> Projects
+          </h2>
+          <h5 className="text-center fw-normal letter-spacing-sm mb-2">
+            "Programming isn’t about what you know; it’s about what you can figure out."
+            <span className="d-block">- Chris Pine</span>
+          </h5>
+          <hr className="line-breaker" />
+          <br /><br />
 
-        <div className="row project-row align-items-stretch">
-          {projectSections.map((section, index) => (
-            <React.Fragment key={index}>
-              <div className="col-12">
-                <h2 className="my-3 fw-normal text-center">{section.title}</h2>
-              </div>
-
-              <div className="col-12 px-md-1 px-3">
-                <div id={`carousel-${index}`} className="carousel slide" data-bs-ride="carousel">
-                  <div className="carousel-indicators">
-                    {section.images.map((_, i) => (
-                      <button
-                        key={i}
-                        type="button"
-                        data-bs-target={`#carousel-${index}`}
-                        data-bs-slide-to={i}
-                        className={i === 0 ? "active" : ""}
-                        aria-current={i === 0 ? "true" : undefined}
-                        aria-label={`Slide ${i + 1}`}
-                      ></button>
-                    ))}
-                  </div>
-
-                  <div className="carousel-inner">
-                    {section.images.map((img, i) => (
-                      <div key={i} className={`carousel-item ${i === 0 ? "active" : ""}`}>
-                        <a href={img.link} target="_blank" rel="noopener noreferrer" className="d-block">
-                          <figure className="project-figure text-center">
-                            <img src={img.src} className="img-fluid project-image" alt={img.alt} />
-                            <div className="project-hover-overlay">
-                              <i className="fa-solid fa-link"></i>
-                            </div>
-                          </figure>
-                        </a>
-                      </div>
-                    ))}
-                  </div>
-
-                  {section.images.length > 1 && (
-                    <>
-                      <button
-                        className="carousel-control-prev"
-                        type="button"
-                        data-bs-target={`#carousel-${index}`}
-                        data-bs-slide="prev"
-                      >
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                      </button>
-                      <button
-                        className="carousel-control-next"
-                        type="button"
-                        data-bs-target={`#carousel-${index}`}
-                        data-bs-slide="next"
-                      >
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                      </button>
-                    </>
-                  )}
+          <div className="row project-row align-items-stretch">
+            {projectSections.map((section, index) => (
+              <React.Fragment key={index}>
+                <div className="col-12">
+                  <h2 className="my-3 fw-normal text-center">{section.title}</h2>
                 </div>
-              </div>
 
-              <div className="col-12 text-center description-text mt-4">
-                <h5 className="fw-400 letter-spacing-sm centered-description project-text">
-                  {section.description}
-                </h5>
-              </div>
+                <div className="col-12 px-md-1 px-3">
+                  <div id={`carousel-${index}`} className="carousel slide" data-bs-ride="carousel">
+                    <div className="carousel-indicators">
+                      {section.images.map((_, i) => (
+                        <button
+                          key={i}
+                          type="button"
+                          data-bs-target={`#carousel-${index}`}
+                          data-bs-slide-to={i}
+                          className={i === 0 ? "active" : ""}
+                          aria-current={i === 0 ? "true" : undefined}
+                          aria-label={`Slide ${i + 1}`}
+                        ></button>
+                      ))}
+                    </div>
 
-              <div className="col-12">
-                <hr className="line-breaker" />
-              </div>
-            </React.Fragment>
-          ))}
+                    <div className="carousel-inner">
+                      {section.images.map((img, i) => (
+                        <div key={i} className={`carousel-item ${i === 0 ? "active" : ""}`}>
+                          <a href={img.link} target="_blank" rel="noopener noreferrer" className="d-block">
+                            <figure className="project-figure text-center">
+                              <img src={img.src} className="img-fluid project-image" alt={img.alt} />
+                              <div className="project-hover-overlay">
+                                <i className="fa-solid fa-link"></i>
+                              </div>
+                            </figure>
+                          </a>
+                        </div>
+                      ))}
+                    </div>
+
+                    {section.images.length > 1 && (
+                      <>
+                        <button
+                          className="carousel-control-prev"
+                          type="button"
+                          data-bs-target={`#carousel-${index}`}
+                          data-bs-slide="prev"
+                        >
+                          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                          className="carousel-control-next"
+                          type="button"
+                          data-bs-target={`#carousel-${index}`}
+                          data-bs-slide="next"
+                        >
+                          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span className="visually-hidden">Next</span>
+                        </button>
+                      </>
+                    )}
+                  </div>
+                </div>
+
+                <div className="col-12 text-center description-text mt-4">
+                  <h5 className="fw-400 letter-spacing-sm centered-description project-text">
+                    {section.description}
+                  </h5>
+                </div>
+
+                <div className="col-12">
+                  <hr className="line-breaker" />
+                </div>
+              </React.Fragment>
+            ))}
+          </div>
         </div>
       </div>
     </div>

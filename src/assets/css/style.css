@@ -12,14 +12,8 @@
   box-sizing: border-box;
 }
 
-* {
-  scroll-behavior: smooth !important;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    display: none;
-  }
+html, body, main {
+  scroll-behavior: smooth;
 }
 
 html, body {
